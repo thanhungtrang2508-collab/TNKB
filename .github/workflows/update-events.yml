@@ -1,0 +1,57 @@
+name: Cập nhật lịch chốt quyền / cổ tức
+
+# Chạy tự động hằng ngày 01:00 UTC (08:00 giờ VN) + cho phép chạy tay.
+# LƯU Ý: lịch (schedule) chỉ kích hoạt khi workflow đã nằm trên nhánh mặc định.
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+    inputs:
+      future_days:
+        description: "Số ngày tới tương lai"
+        default: "180"
+      past_days:
+        description: "Số ngày lùi quá khứ"
+        default: "30"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Cài thư viện
+        run: pip install -r requirements.txt
+
+      - name: Lập bảng lịch sự kiện (toàn thị trường)
+        # --sleep 3.5 để giữ dưới giới hạn 20 request/phút của API guest.
+        run: |
+          python3 scripts/build_events.py \
+            --past-days "${{ github.event.inputs.past_days || '30' }}" \
+            --future-days "${{ github.event.inputs.future_days || '180' }}" \
+            --sleep 3.5
+
+      - name: Commit kết quả
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Không có thay đổi."
+          else
+            git commit -m "Cập nhật lịch chốt quyền/cổ tức $(date -u +%Y-%m-%d)"
+            git push
+          fi
