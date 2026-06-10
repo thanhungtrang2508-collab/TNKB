@@ -24,7 +24,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -37,12 +37,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Lập bảng lịch sự kiện (toàn thị trường)
-        # --sleep 3.5 để giữ dưới giới hạn 20 request/phút của API guest.
+        # Mỗi mã tốn ~2 request -> --sleep 6.5 để giữ dưới 20 request/phút (API guest).
         run: |
           python3 scripts/build_events.py \
             --past-days "${{ github.event.inputs.past_days || '30' }}" \
             --future-days "${{ github.event.inputs.future_days || '180' }}" \
-            --sleep 3.5
+            --sleep 6.5
 
       - name: Commit kết quả
         run: |
