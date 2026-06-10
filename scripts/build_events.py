@@ -54,6 +54,9 @@ CATEGORY_LABEL = {
 }
 DEFAULT_CATEGORIES = ["DIVIDEND", "SHAREHOLDER_MEETING"]
 
+# Tên loại sự kiện trả cổ tức tiền mặt (dùng để so sánh giữa các kỳ).
+CASH_EVENT = "Trả cổ tức bằng tiền mặt"
+
 # Cột đầu ra (header tiếng Việt) -> tên cột nguồn
 OUTPUT_COLUMNS = [
     ("Mã CP", "ticker"),
@@ -67,6 +70,9 @@ OUTPUT_COLUMNS = [
     ("Ngày GDKHQ", "exright_date"),
     ("Ngày ĐKCC (chốt quyền)", "record_date"),
     ("Ngày thực hiện", "exercise_date"),
+    ("Cổ tức TM kỳ trước (đ/cp)", "prev_cash"),
+    ("Ngày kỳ trước", "prev_date"),
+    ("So với kỳ trước", "compare"),
 ]
 
 
@@ -132,6 +138,54 @@ def _date_only(val):
     return s[:10]  # '2026-05-26T00:00:00' -> '2026-05-26'
 
 
+def _cash_history(ev):
+    """Lịch sử cổ tức TIỀN MẶT của 1 mã: list (ngày, số tiền/cp), tăng dần theo ngày."""
+    hist = []
+    for _, e in ev.iterrows():
+        if e.get("event_name_vi") != CASH_EVENT:
+            continue
+        d = _date_only(e.get("exright_date")) or _date_only(e.get("record_date"))
+        v = e.get("value_per_share")
+        if not d or pd.isna(v):
+            continue
+        try:
+            hist.append((d, float(v)))
+        except (TypeError, ValueError):
+            pass
+    hist.sort(key=lambda x: x[0])
+    return hist
+
+
+def _compare_prev(cur_date, cur_val, history):
+    """So sánh kỳ cổ tức tiền mặt hiện tại với kỳ gần nhất TRƯỚC đó.
+
+    Trả về (prev_cash, prev_date, compare) — chuỗi rỗng nếu không có kỳ trước.
+    """
+    prev = None
+    for d, v in history:
+        if cur_date and d < cur_date:
+            prev = (d, v)
+        else:
+            break
+    if not prev:
+        return "", "", ""
+    pdate, pv = prev
+    prev_cash = f"{pv:g}"
+    try:
+        cur = float(cur_val)
+    except (TypeError, ValueError):
+        return prev_cash, pdate, ""
+    if pv == 0:
+        compare = ""
+    elif cur > pv:
+        compare = f"Tăng {(cur - pv) / pv * 100:.0f}% ({pv:g}→{cur:g})"
+    elif cur < pv:
+        compare = f"Giảm {(pv - cur) / pv * 100:.0f}% ({pv:g}→{cur:g})"
+    else:
+        compare = f"Bằng ({pv:g})"
+    return prev_cash, pdate, compare
+
+
 def build(args):
     uni = get_universe(args.exchange,
                        args.symbols.split(",") if args.symbols else None,
@@ -160,6 +214,9 @@ def build(args):
         if ev.empty:
             time.sleep(args.sleep)
             continue
+        # Toàn bộ lịch sử cổ tức tiền mặt của mã (kể cả kỳ ngoài cửa sổ lọc),
+        # dùng để so sánh kỳ hiện tại với kỳ gần nhất trước đó.
+        history = _cash_history(ev)
         for _, e in ev.iterrows():
             if e.get("category") not in cats:
                 continue
@@ -172,6 +229,11 @@ def build(args):
                         continue
                 except ValueError:
                     pass
+            # so sánh với kỳ trả cổ tức tiền mặt gần nhất (chỉ với sự kiện cổ tức tiền mặt)
+            prev_cash, prev_date, compare = "", "", ""
+            if e.get("event_name_vi") == CASH_EVENT:
+                cur_d = _date_only(e.get("exright_date")) or _date_only(e.get("record_date"))
+                prev_cash, prev_date, compare = _compare_prev(cur_d, e.get("value_per_share"), history)
             exch, name = meta.get(sym, ("", ""))
             rows.append({
                 "ticker": sym,
@@ -185,6 +247,9 @@ def build(args):
                 "exright_date": _date_only(e.get("exright_date")),
                 "record_date": _date_only(e.get("record_date")),
                 "exercise_date": _date_only(e.get("payout_date")) or _date_only(e.get("issue_date")),
+                "prev_cash": prev_cash,
+                "prev_date": prev_date,
+                "compare": compare,
                 "_sort": anchor or "9999",
             })
         time.sleep(args.sleep)
