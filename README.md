@@ -33,9 +33,20 @@ Mỗi dòng là một sự kiện quyền của một mã:
 ## Nguồn dữ liệu
 
 Lấy từ thư viện mã nguồn mở [`vnstock`](https://github.com/vnstock-hq) (nguồn VCI).
-API guest giới hạn **20 request/phút** nên script tự giãn nhịp; quét toàn thị
-trường (~1.500 mã) mất khoảng **1–1,5 giờ**. Đăng ký API key miễn phí
-(60 req/phút tại https://vnstocks.com/login) có thể rút xuống ~25 phút.
+
+Giới hạn tốc độ API theo gói:
+- **Guest** (không key): 20 request/phút → quét toàn thị trường ~2,5–3 giờ.
+- **Community** (có API key miễn phí): 60 request/phút → ~1 giờ.
+
+Để dùng gói Community, đặt API key vào biến môi trường `VNSTOCK_API_KEY`
+(lấy key miễn phí tại https://vnstocks.com/login). Trong GitHub Actions, key được
+nạp từ **secret** `VNSTOCK_API_KEY` — **không** lưu trong mã nguồn.
+
+```bash
+# chạy tay với API key (gói Community, nhanh hơn)
+export VNSTOCK_API_KEY="vnstock_xxx"
+python3 scripts/build_events.py --sleep 2.5
+```
 
 ## Chạy tay
 

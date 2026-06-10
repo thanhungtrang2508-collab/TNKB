@@ -138,6 +138,13 @@ def build(args):
                        args.limit)
     meta = {r.symbol: (r.exchange, r.organ_name) for r in uni.itertuples()}
     total = len(uni)
+    try:
+        import vnai
+        info = vnai.get_user_tier()
+        lim = info.get("limits", {}).get("per_minute", "?")
+        print(f"[i] Gói API: {info.get('tier')} ({lim} req/phút)", file=sys.stderr)
+    except Exception:
+        pass
     print(f"[i] Quét {total} mã ...", file=sys.stderr)
 
     cats = set(args.categories.split(",")) if args.categories else set(DEFAULT_CATEGORIES)

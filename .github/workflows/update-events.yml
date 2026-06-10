@@ -37,12 +37,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Lập bảng lịch sự kiện (toàn thị trường)
-        # Mỗi mã tốn ~2 request -> --sleep 6.5 để giữ dưới 20 request/phút (API guest).
+        # Có API key (gói Community 60 req/phút) -> --sleep 2.5 (~48 req/phút, an toàn).
+        # Nếu CHƯA thêm secret VNSTOCK_API_KEY, vnstock tự về gói guest 20 req/phút;
+        # khi đó nên đổi --sleep lên 6.5 để khỏi bị chặn.
+        env:
+          VNSTOCK_API_KEY: ${{ secrets.VNSTOCK_API_KEY }}
         run: |
           python3 scripts/build_events.py \
             --past-days "${{ github.event.inputs.past_days || '30' }}" \
             --future-days "${{ github.event.inputs.future_days || '180' }}" \
-            --sleep 6.5
+            --sleep 2.5
 
       - name: Commit kết quả
         run: |
