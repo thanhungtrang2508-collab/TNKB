@@ -30,6 +30,19 @@ Mỗi dòng là một sự kiện quyền của một mã:
 - `lich_su_kien.xlsx`
 - `last_updated.txt`
 
+## 📱 Web app theo dõi
+
+Ngoài file Excel/CSV, repo tự build **web app 1 trang** tại [`docs/index.html`](docs/index.html):
+- Tab theo sàn (Tất cả / HOSE / HNX / UPCOM) + danh mục yêu thích ⭐ (lưu trên máy)
+- Thanh tìm kiếm: gõ mã → hiện ngay thẻ chi tiết đầy đủ sự kiện
+- Bộ lọc nhanh (sắp chốt quyền, cổ tức tiền mặt, cổ tức CP, ĐHĐCĐ), sắp xếp theo cột
+- Lịch tháng 📅: ngày nào có sự kiện chốt quyền sẽ đánh dấu, bấm vào xem
+- Mã màu: 🔺 tăng / 🔻 giảm so kỳ cổ tức trước, vàng = sắp đến ngày GDKHQ
+
+App được build lại mỗi ngày cùng dữ liệu (`scripts/build_app.py`) và deploy lên
+GitHub Pages qua [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)
+(yêu cầu repo public). Cũng có thể tải `docs/index.html` về mở trực tiếp bằng trình duyệt.
+
 ## Nguồn dữ liệu
 
 Lấy từ thư viện mã nguồn mở [`vnstock`](https://github.com/vnstock-hq) (nguồn VCI).

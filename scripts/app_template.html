@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch chốt quyền & cổ tức</title>
+<style>
+:root{
+  --bg:#f4f6fb; --card:#fff; --line:#e3e8f0; --text:#1c2433; --muted:#68748a;
+  --blue:#1a56db; --blue-soft:#e8effc; --green:#067647; --green-soft:#e6f4ec;
+  --red:#b42318; --red-soft:#fdecea; --amber:#92400e; --amber-soft:#fef3c7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:14px}
+.wrap{max-width:1100px;margin:0 auto;padding:14px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:12px}
+header h1{font-size:20px}
+header .upd{color:var(--muted);font-size:12px;margin-left:auto}
+.searchbox{position:relative;margin-bottom:10px}
+.searchbox input{width:100%;padding:12px 14px;font-size:16px;border:2px solid var(--line);border-radius:10px;outline:none}
+.searchbox input:focus{border-color:var(--blue)}
+.suggest{position:absolute;top:100%;left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:0 0 10px 10px;box-shadow:0 8px 20px rgba(16,24,40,.12);z-index:30;max-height:280px;overflow:auto;display:none}
+.suggest div{padding:9px 14px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.suggest div:hover,.suggest div.active{background:var(--blue-soft)}
+.suggest b{min-width:48px}
+.suggest small{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tabs,.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.tabs button,.chips button{border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:999px;cursor:pointer;font-size:13px;color:var(--text)}
+.tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.chips button.on{background:#16243d;border-color:#16243d;color:#fff}
+.viewtoggle{margin-left:auto;display:flex;gap:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f8fafc;font-size:12px;color:var(--muted);cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0}
+th .arr{opacity:.6}
+tr:hover td{background:#f8fafc}
+td.tk{font-weight:700;color:var(--blue);cursor:pointer;white-space:nowrap}
+td .co{display:block;font-weight:400;color:var(--muted);font-size:11px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.b-up{background:var(--green-soft);color:var(--green)}
+.b-down{background:var(--red-soft);color:var(--red)}
+.b-flat{background:#eef1f5;color:var(--muted)}
+.b-soon{background:var(--amber-soft);color:var(--amber)}
+.b-ex{background:var(--blue-soft);color:var(--blue)}
+tr.soon td{background:#fffbeb}
+.star{cursor:pointer;font-size:16px;color:#cbd5e1;user-select:none}
+.star.on{color:#f59e0b}
+.more{display:block;width:100%;padding:11px;background:#f8fafc;border:none;border-top:1px solid var(--line);cursor:pointer;color:var(--blue);font-weight:600}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+/* detail card */
+.detail{margin-bottom:10px;display:none}
+.detail .hd{display:flex;align-items:center;gap:10px;padding:13px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.detail .hd h2{font-size:18px}
+.detail .hd .x{margin-left:auto;border:none;background:none;font-size:20px;cursor:pointer;color:var(--muted)}
+/* calendar */
+#calView{display:none}
+.calhd{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.calhd b{font-size:16px;min-width:140px;text-align:center}
+.calhd button{border:1px solid var(--line);background:var(--card);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px}
+.calgrid{display:grid;grid-template-columns:repeat(7,1fr)}
+.calgrid .dow{padding:8px 4px;text-align:center;font-size:11px;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--line)}
+.calgrid .day{min-height:62px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:5px;cursor:pointer;position:relative}
+.calgrid .day:nth-child(7n){border-right:none}
+.calgrid .day.dim{background:#fafbfd;color:#c1c8d4}
+.calgrid .day.sel{outline:2px solid var(--blue);outline-offset:-2px}
+.calgrid .day.today .dnum{background:var(--blue);color:#fff}
+.dnum{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;border-radius:50%;font-size:12px}
+.dcnt{position:absolute;bottom:5px;left:5px;right:5px;font-size:10px;font-weight:700;color:var(--blue);background:var(--blue-soft);border-radius:6px;text-align:center;padding:1px 2px}
+.daylist{padding:0}
+footer{margin:16px 0;color:var(--muted);font-size:11px;text-align:center;line-height:1.6}
+@media(max-width:640px){
+  .hidemobile{display:none}
+  td .co{max-width:110px}
+  .wrap{padding:8px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📅 Lịch chốt quyền &amp; cổ tức</h1>
+    <span class="upd">Dữ liệu cập nhật: __UPDATED__</span>
+  </header>
+
+  <div class="searchbox">
+    <input id="q" type="text" placeholder="🔍 Gõ mã cổ phiếu (vd: HPG, FPT, VNM)..." autocomplete="off">
+    <div class="suggest" id="suggest"></div>
+  </div>
+
+  <div class="card detail" id="detail"></div>
+
+  <div class="tabs" id="tabs">
+    <button data-t="ALL" class="on">Tất cả</button>
+    <button data-t="HOSE">HOSE</button>
+    <button data-t="HNX">HNX</button>
+    <button data-t="UPCOM">UPCOM</button>
+    <button data-t="FAV">⭐ Của tôi</button>
+    <div class="viewtoggle">
+      <button id="btnList" class="on">☰ Danh sách</button>
+      <button id="btnCal">📅 Lịch</button>
+    </div>
+  </div>
+
+  <div class="chips" id="chips">
+    <button data-f="upcoming" class="on">Sắp chốt quyền</button>
+    <button data-f="cash">Cổ tức tiền mặt</button>
+    <button data-f="stock">Cổ tức CP / Phát hành</button>
+    <button data-f="meeting">ĐHĐCĐ</button>
+    <button data-f="all">Tất cả sự kiện</button>
+  </div>
+
+  <div class="card" id="listView">
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr>
+        <th style="width:26px"></th>
+        <th data-s="t">Mã <span class="arr"></span></th>
+        <th data-s="x" class="hidemobile">Sàn <span class="arr"></span></th>
+        <th data-s="e">Sự kiện <span class="arr"></span></th>
+        <th data-s="v">Tiền / Tỷ lệ <span class="arr"></span></th>
+        <th data-s="g">GDKHQ <span class="arr"></span></th>
+        <th data-s="r" class="hidemobile">Chốt quyền <span class="arr"></span></th>
+        <th data-s="c">So kỳ trước <span class="arr"></span></th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    </div>
+    <button class="more" id="more" style="display:none">Hiện thêm ▾</button>
+  </div>
+
+  <div class="card" id="calView">
+    <div class="calhd">
+      <button id="calPrev">‹</button><b id="calTitle"></b><button id="calNext">›</button>
+      <span style="color:var(--muted);font-size:12px">· chấm xanh = có sự kiện chốt quyền, bấm vào ngày để xem</span>
+    </div>
+    <div class="calgrid" id="calGrid"></div>
+    <div class="daylist" id="dayList"></div>
+  </div>
+
+  <footer>
+    Nguồn dữ liệu: vnstock (VCI) — tự động cập nhật hằng ngày · Chỉ mang tính tham khảo,
+    đối chiếu công bố chính thức của doanh nghiệp / HOSE / HNX / VSDC trước khi giao dịch.<br>
+    GDKHQ = ngày giao dịch không hưởng quyền (mua chậm nhất phiên liền trước để được hưởng quyền).
+  </footer>
+</div>
+
+<script>
+// Dữ liệu: [mã, sàn, tênDN, nhóm, sựKiện, chiTiết, tỷLệ, tiềnMặt, GDKHQ, ĐKCC, thựcHiện, TMkỳTrước, ngàyKỳTrước, soSánh]
+const RAW = __DATA__;
+const F = {t:0,x:1,n:2,grp:3,e:4,d:5,ratio:6,cash:7,g:8,r:9,exe:10,pc:11,pd:12,c:13};
+const today = new Date(); today.setHours(0,0,0,0);
+const fmtD = s => s ? s.slice(8,10)+'/'+s.slice(5,7)+'/'+s.slice(0,4) : '';
+const fmtMoney = v => v===''||v==null ? '' : Number(v).toLocaleString('vi-VN');
+const days = s => { if(!s) return null; const d=new Date(s+'T00:00:00'); return Math.round((d-today)/864e5); };
+
+function kind(r){
+  const e = r[F.e]||'';
+  if(e==='Trả cổ tức bằng tiền mặt') return 'cash';
+  if(e.indexOf('Phát hành')>=0) return 'stock';
+  if(e.indexOf('ội')>=0 || e.indexOf('ổ đông')>=0) return 'meeting';
+  return 'other';
+}
+function cmpClass(c){ if(!c) return ''; if(c.startsWith('Tăng')) return 'b-up'; if(c.startsWith('Giảm')) return 'b-down'; return 'b-flat'; }
+
+// watchlist
+let FAV = new Set(JSON.parse(localStorage.getItem('tnkb_fav')||'[]'));
+function saveFav(){ localStorage.setItem('tnkb_fav', JSON.stringify([...FAV])); }
+function toggleFav(t){ FAV.has(t)?FAV.delete(t):FAV.add(t); saveFav(); render(); renderDetailIfOpen(); }
+
+// state
+let tab='ALL', filter='upcoming', sortKey='g', sortAsc=true, shown=200, detailTk=null, view='list';
+let calY=today.getFullYear(), calM=today.getMonth(), calSel=null;
+
+function baseRows(){
+  let rows = RAW;
+  if(tab==='FAV') rows = rows.filter(r=>FAV.has(r[F.t]));
+  else if(tab!=='ALL') rows = rows.filter(r=>r[F.x]===tab);
+  if(filter==='upcoming') rows = rows.filter(r=>{const d=days(r[F.g]||r[F.r]); return d!==null && d>=0;});
+  else if(filter!=='all') rows = rows.filter(r=>kind(r)===filter);
+  return rows;
+}
+function sortRows(rows){
+  const key=sortKey, asc=sortAsc?1:-1;
+  const val = r => key==='t'?r[F.t] : key==='x'?r[F.x] : key==='e'?r[F.e]
+    : key==='v'?(Number(r[F.cash])||parseFloat(r[F.ratio])||0)
+    : key==='g'?(r[F.g]||'9999') : key==='r'?(r[F.r]||'9999') : (r[F.c]||'');
+  return rows.slice().sort((a,b)=>{const x=val(a),y=val(b); return x<y?-asc:x>y?asc:0;});
+}
+function rowHtml(r){
+  const d = days(r[F.g]);
+  const soon = d!==null && d>=0 && d<=7;
+  const cnt = d===null?'' : d===0?'<span class="badge b-soon">HÔM NAY</span>'
+    : (d>0&&d<=14?`<span class="badge b-soon">còn ${d} ngày</span>`:'');
+  const money = r[F.cash]!=='' ? fmtMoney(r[F.cash])+'đ' : '';
+  const val = [money, r[F.ratio]].filter(Boolean).join(' · ');
+  const cmp = r[F.c] ? `<span class="badge ${cmpClass(r[F.c])}">${r[F.c]}</span>` : '';
+  return `<tr class="${soon?'soon':''}">
+    <td><span class="star ${FAV.has(r[F.t])?'on':''}" onclick="toggleFav('${r[F.t]}')">★</span></td>
+    <td class="tk" onclick="openDetail('${r[F.t]}')">${r[F.t]}<span class="co">${r[F.n]||''}</span></td>
+    <td class="hidemobile"><span class="badge b-ex">${r[F.x]}</span></td>
+    <td>${r[F.e]||''}</td>
+    <td><b>${val}</b></td>
+    <td>${fmtD(r[F.g])} ${cnt}</td>
+    <td class="hidemobile">${fmtD(r[F.r])}</td>
+    <td>${cmp}</td>
+  </tr>`;
+}
+function render(){
+  const rows = sortRows(baseRows());
+  const tb = document.getElementById('tbody');
+  if(!rows.length){ tb.innerHTML = `<tr><td colspan="8" class="empty">Không có sự kiện nào${tab==='FAV'?' — bấm ★ ở danh sách để thêm mã vào danh mục':''}.</td></tr>`; }
+  else tb.innerHTML = rows.slice(0,shown).map(rowHtml).join('');
+  const more = document.getElementById('more');
+  more.style.display = rows.length>shown?'block':'none';
+  more.textContent = `Hiện thêm (${rows.length-shown} dòng) ▾`;
+  document.querySelectorAll('th[data-s] .arr').forEach(a=>a.textContent='');
+  const th = document.querySelector(`th[data-s="${sortKey}"] .arr`); if(th) th.textContent = sortAsc?'▲':'▼';
+  if(view==='cal') renderCal();
+}
+
+// ---- detail card ----
+function openDetail(t){
+  detailTk = t;
+  const evs = RAW.filter(r=>r[F.t]===t);
+  if(!evs.length) return;
+  const el = document.getElementById('detail');
+  const info = evs[0];
+  const list = evs.slice().sort((a,b)=>(b[F.g]||b[F.r]||'')<(a[F.g]||a[F.r]||'')?-1:1);
+  el.innerHTML = `
+    <div class="hd">
+      <span class="star ${FAV.has(t)?'on':''}" style="font-size:22px" onclick="toggleFav('${t}')">★</span>
+      <h2>${t}</h2><span class="badge b-ex">${info[F.x]}</span>
+      <span style="color:var(--muted)">${info[F.n]||''}</span>
+      <button class="x" onclick="closeDetail()">✕</button>
+    </div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>Sự kiện</th><th>Chi tiết</th><th>Tiền/Tỷ lệ</th><th>GDKHQ</th><th class="hidemobile">Chốt quyền</th><th class="hidemobile">Thực hiện</th><th>So kỳ trước</th></tr></thead>
+      <tbody>${list.map(r=>{
+        const money = r[F.cash]!==''?fmtMoney(r[F.cash])+'đ':'';
+        const val=[money,r[F.ratio]].filter(Boolean).join(' · ');
+        const d=days(r[F.g]); const cnt=d===0?' <span class="badge b-soon">HÔM NAY</span>':(d>0&&d<=14?` <span class="badge b-soon">còn ${d} ngày</span>`:'');
+        return `<tr><td>${r[F.e]}</td><td style="max-width:240px">${r[F.d]||''}</td><td><b>${val}</b></td>
+          <td>${fmtD(r[F.g])}${cnt}</td><td class="hidemobile">${fmtD(r[F.r])}</td><td class="hidemobile">${fmtD(r[F.exe])}</td>
+          <td>${r[F.c]?`<span class="badge ${cmpClass(r[F.c])}">${r[F.c]}</span>`:''}</td></tr>`;
+      }).join('')}</tbody>
+    </table></div>`;
+  el.style.display='block';
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function closeDetail(){ detailTk=null; document.getElementById('detail').style.display='none'; }
+function renderDetailIfOpen(){ if(detailTk) openDetail(detailTk); }
+
+// ---- search ----
+const TICKERS = (()=>{ const m=new Map(); RAW.forEach(r=>{ if(!m.has(r[F.t])) m.set(r[F.t], r[F.n]||''); }); return [...m.entries()]; })();
+const q = document.getElementById('q'), sg = document.getElementById('suggest');
+let sgIdx=-1;
+q.addEventListener('input', ()=>{
+  const v = q.value.trim().toUpperCase();
+  if(!v){ sg.style.display='none'; return; }
+  const hit = TICKERS.filter(([t,n])=>t.startsWith(v) || (n||'').toUpperCase().includes(v)).slice(0,8);
+  sgIdx=-1;
+  if(!hit.length){ sg.innerHTML='<div><small>Không tìm thấy mã nào</small></div>'; sg.style.display='block'; return; }
+  sg.innerHTML = hit.map(([t,n])=>`<div data-t="${t}"><b>${t}</b><small>${n}</small></div>`).join('');
+  sg.style.display='block';
+  sg.querySelectorAll('div[data-t]').forEach(d=>d.onclick=()=>{ pick(d.dataset.t); });
+  const exact = TICKERS.find(([t])=>t===v);
+  if(exact) openDetail(v);
+});
+function pick(t){ q.value=t; sg.style.display='none'; openDetail(t); }
+q.addEventListener('keydown', e=>{
+  const items = sg.querySelectorAll('div[data-t]');
+  if(e.key==='ArrowDown'){ sgIdx=Math.min(sgIdx+1,items.length-1); }
+  else if(e.key==='ArrowUp'){ sgIdx=Math.max(sgIdx-1,0); }
+  else if(e.key==='Enter'){ if(sgIdx>=0&&items[sgIdx]) pick(items[sgIdx].dataset.t); else if(items.length) pick(items[0].dataset.t); return; }
+  else if(e.key==='Escape'){ sg.style.display='none'; return; }
+  else return;
+  items.forEach((d,i)=>d.classList.toggle('active',i===sgIdx));
+});
+document.addEventListener('click', e=>{ if(!e.target.closest('.searchbox')) sg.style.display='none'; });
+
+// ---- tabs / chips / sort / more ----
+document.getElementById('tabs').addEventListener('click', e=>{
+  const b=e.target.closest('button[data-t]'); if(!b) return;
+  tab=b.dataset.t; shown=200;
+  document.querySelectorAll('#tabs button[data-t]').forEach(x=>x.classList.toggle('on',x===b));
+  render();
+});
+document.getElementById('chips').addEventListener('click', e=>{
+  const b=e.target.closest('button[data-f]'); if(!b) return;
+  filter=b.dataset.f; shown=200;
+  document.querySelectorAll('#chips button').forEach(x=>x.classList.toggle('on',x===b));
+  render();
+});
+document.querySelectorAll('th[data-s]').forEach(th=>th.onclick=()=>{
+  const k=th.dataset.s;
+  if(sortKey===k) sortAsc=!sortAsc; else {sortKey=k; sortAsc=true;}
+  render();
+});
+document.getElementById('more').onclick=()=>{ shown+=300; render(); };
+
+// ---- calendar ----
+const MN=['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+document.getElementById('btnList').onclick=()=>setView('list');
+document.getElementById('btnCal').onclick=()=>setView('cal');
+function setView(v){
+  view=v;
+  document.getElementById('listView').style.display = v==='list'?'block':'none';
+  document.getElementById('calView').style.display = v==='cal'?'block':'none';
+  document.getElementById('btnList').classList.toggle('on',v==='list');
+  document.getElementById('btnCal').classList.toggle('on',v==='cal');
+  if(v==='cal') renderCal();
+}
+document.getElementById('calPrev').onclick=()=>{ calM--; if(calM<0){calM=11;calY--;} calSel=null; renderCal(); };
+document.getElementById('calNext').onclick=()=>{ calM++; if(calM>11){calM=0;calY++;} calSel=null; renderCal(); };
+function calRows(){
+  // dùng bộ lọc tab + loại sự kiện hiện tại (trừ 'upcoming' -> hiện tất cả trên lịch)
+  let rows = RAW;
+  if(tab==='FAV') rows = rows.filter(r=>FAV.has(r[F.t]));
+  else if(tab!=='ALL') rows = rows.filter(r=>r[F.x]===tab);
+  if(filter!=='all' && filter!=='upcoming') rows = rows.filter(r=>kind(r)===filter);
+  return rows;
+}
+function renderCal(){
+  document.getElementById('calTitle').textContent = MN[calM]+' '+calY;
+  const rows = calRows();
+  const byDay = {};
+  rows.forEach(r=>{ const g=r[F.g]||r[F.r]; if(g) (byDay[g]=byDay[g]||[]).push(r); });
+  const first = new Date(calY,calM,1);
+  let start = (first.getDay()+6)%7; // T2=0
+  const dim = new Date(calY,calM+1,0).getDate();
+  const cells=[];
+  ['T2','T3','T4','T5','T6','T7','CN'].forEach(d=>cells.push(`<div class="dow">${d}</div>`));
+  for(let i=0;i<start;i++) cells.push('<div class="day dim"></div>');
+  const tstr = today.toISOString().slice(0,10);
+  for(let d=1;d<=dim;d++){
+    const ds = calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+    const n = (byDay[ds]||[]).length;
+    cells.push(`<div class="day ${ds===tstr?'today':''} ${calSel===ds?'sel':''}" data-d="${ds}">
+      <span class="dnum">${d}</span>${n?`<span class="dcnt">${n} sự kiện</span>`:''}</div>`);
+  }
+  document.getElementById('calGrid').innerHTML = cells.join('');
+  document.querySelectorAll('.calgrid .day[data-d]').forEach(el=>el.onclick=()=>{ calSel=el.dataset.d; renderCal(); });
+  const dl = document.getElementById('dayList');
+  if(calSel && byDay[calSel]){
+    dl.innerHTML = `<table><thead><tr><th colspan="5" style="cursor:default">Sự kiện ngày ${fmtD(calSel)} (theo ngày GDKHQ)</th></tr></thead>
+      <tbody>${byDay[calSel].map(r=>{
+        const money=r[F.cash]!==''?fmtMoney(r[F.cash])+'đ':'';
+        const val=[money,r[F.ratio]].filter(Boolean).join(' · ');
+        return `<tr><td class="tk" onclick="openDetail('${r[F.t]}')">${r[F.t]}</td>
+          <td><span class="badge b-ex">${r[F.x]}</span></td><td>${r[F.e]}</td><td><b>${val}</b></td>
+          <td>${r[F.c]?`<span class="badge ${cmpClass(r[F.c])}">${r[F.c]}</span>`:''}</td></tr>`;
+      }).join('')}</tbody></table>`;
+  } else dl.innerHTML='';
+}
+
+render();
+</script>
+</body>
+</html>
