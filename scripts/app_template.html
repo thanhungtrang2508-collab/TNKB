@@ -90,6 +90,8 @@ footer{margin:16px 0;color:var(--muted);font-size:11px;text-align:center;line-he
 
   <div class="card detail" id="detail"></div>
 
+  <div class="card" id="todayPanel" style="display:none;margin-bottom:10px"></div>
+
   <div class="tabs" id="tabs">
     <button data-t="ALL" class="on">Tất cả</button>
     <button data-t="HOSE">HOSE</button>
@@ -354,7 +356,38 @@ function renderCal(){
   } else dl.innerHTML='';
 }
 
+// ---- bảng tóm tắt HÔM NAY ----
+function renderToday(){
+  const ts = today.toISOString().slice(0,10);
+  const ex = RAW.filter(r=>r[F.g]===ts);                       // GDKHQ hôm nay
+  const pay = RAW.filter(r=>r[F.exe]===ts && r[F.g]!==ts);     // tiền/CP về hôm nay
+  const el = document.getElementById('todayPanel');
+  if(!ex.length && !pay.length){ el.style.display='none'; return; }
+  const item = (r,tag)=>{
+    const money=r[F.cash]!==''?fmtMoney(r[F.cash])+'đ':'';
+    const val=[money,r[F.ratio]].filter(Boolean).join(' · ');
+    return `<tr style="cursor:pointer" onclick="openDetail('${r[F.t]}')">
+      <td class="tk">${r[F.t]}<span class="co">${r[F.n]||''}</span></td>
+      <td><span class="badge b-ex">${r[F.x]}</span></td>
+      <td>${r[F.e]}</td><td><b>${val}</b></td>
+      <td><span class="badge ${tag==='GDKHQ'?'b-soon':'b-up'}">${tag}</span></td>
+      <td>${r[F.c]?`<span class="badge ${cmpClass(r[F.c])}">${r[F.c]}</span>`:''}</td></tr>`;
+  };
+  el.innerHTML = `<div class="hd" style="display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)">
+      <b style="font-size:15px">📌 Hôm nay ${fmtD(ts)}</b>
+      <span style="color:var(--muted);font-size:12px">${ex.length? ex.length+' sự kiện GDKHQ':''}${ex.length&&pay.length?' · ':''}${pay.length? pay.length+' sự kiện chi trả':''} — bấm vào dòng để xem chi tiết</span>
+    </div>
+    <div style="overflow-x:auto"><table><tbody>
+      ${ex.map(r=>item(r,'GDKHQ')).join('')}${pay.map(r=>item(r,'Chi trả')).join('')}
+    </tbody></table></div>`;
+  el.style.display='block';
+}
+
 render();
+renderToday();
+// mở chi tiết theo #hash trên URL (vd .../#HPG — dùng cho link từ email)
+(function(){ const h=decodeURIComponent(location.hash.slice(1)).toUpperCase().trim(); if(h) openDetail(h); })();
+window.addEventListener('hashchange',()=>{ const h=decodeURIComponent(location.hash.slice(1)).toUpperCase().trim(); if(h) openDetail(h); });
 </script>
 </body>
 </html>

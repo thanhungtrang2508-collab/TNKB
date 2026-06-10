@@ -1,10 +1,11 @@
 name: Cập nhật lịch chốt quyền / cổ tức
 
-# Chạy tự động hằng ngày 01:00 UTC (08:00 giờ VN) + cho phép chạy tay.
+# Chạy tự động hằng ngày 22:30 UTC (05:30 sáng giờ VN) + cho phép chạy tay.
+# Quét mất ~1-2.5h nên xong trước 08:30, kịp cho bản tin email 09:00.
 # LƯU Ý: lịch (schedule) chỉ kích hoạt khi workflow đã nằm trên nhánh mặc định.
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "30 22 * * *"
   workflow_dispatch:
     inputs:
       future_days:

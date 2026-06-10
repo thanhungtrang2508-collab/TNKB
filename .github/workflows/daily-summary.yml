@@ -1,0 +1,46 @@
+name: Bản tin 9h sáng
+
+# 02:00 UTC = 09:00 giờ Việt Nam. Gửi email tóm tắt sự kiện hôm nay.
+# Cần secret GMAIL_APP_PASSWORD (mật khẩu ứng dụng Gmail) để gửi.
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tạo bản tin
+        id: news
+        run: |
+          python3 scripts/build_summary.py
+          echo "subject=$(cat /tmp/summary_subject.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Kiểm tra secret
+        id: chk
+        env:
+          PW: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          if [ -n "$PW" ]; then echo "ok=true" >> "$GITHUB_OUTPUT";
+          else echo "ok=false" >> "$GITHUB_OUTPUT"; echo "::warning::Chưa có secret GMAIL_APP_PASSWORD - bỏ qua gửi email"; fi
+
+      - name: Gửi email
+        if: steps.chk.outputs.ok == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: thanhungtrang2508@gmail.com
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: ${{ steps.news.outputs.subject }}
+          to: thanhungtrang2508@gmail.com
+          from: Bản tin chốt quyền TNKB
+          html_body: file:///tmp/summary_email.html
