@@ -1,30 +1,4 @@
 ﻿Mã CP,Sàn,Tên DN,Nhóm,Loại sự kiện,Chi tiết,Tỷ lệ,Tiền mặt (đ/cp),Ngày GDKHQ,Ngày ĐKCC (chốt quyền),Ngày thực hiện,Cổ tức TM kỳ trước (đ/cp),Ngày kỳ trước,So với kỳ trước
-BHK,UPCOM,CTCP Bia Hà Nội - Kim Bài,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 900 VND,9%,900.0,2026-06-04,2026-06-05,2026-06-25,900,2025-06-02,Bằng (900)
-BIG,UPCOM,CTCP Tập đoàn Đầu tư Big,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 200 VND,2%,200.0,2026-06-04,2026-06-05,2026-07-30,,,
-BIG,UPCOM,CTCP Tập đoàn Đầu tư Big,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 10.0%,10%,,2026-06-04,2026-06-05,,,,
-CAT,UPCOM,CTCP Thủy sản Cà Mau,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 1 2026 - 500 VND,5%,500.0,2026-06-04,2026-06-05,2026-06-24,1500,2025-12-16,Giảm 67% (1500→500)
-CAT,UPCOM,CTCP Thủy sản Cà Mau,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 500 VND,5%,500.0,2026-06-04,2026-06-05,2026-06-24,1500,2025-12-16,Giảm 67% (1500→500)
-CPC,HNX,CTCP Thuốc sát trùng Cần Thơ,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,500 VND",15%,1500.0,2026-06-04,2026-06-05,2026-06-24,1800,2025-06-16,Giảm 17% (1800→1500)
-DCT,UPCOM,CTCP Tấm lợp Vật liệu Xây dựng Đồng Nai,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,DCT - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-30,,,
-DLD,UPCOM,CTCP Du lịch Đắk Lắk,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,DLD - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-30,,,
-DVP,HOSE,CTCP Đầu tư và Phát triển Cảng Đình Vũ,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 1 2025 - 5,000 VND",50%,5000.0,2026-06-04,2026-06-05,2026-06-29,1000,2025-09-11,Tăng 400% (1000→5000)
-FOC,UPCOM,CTCP Dịch vụ Trực tuyến FPT,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,FOC - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-30,,,
-HNF,UPCOM,CTCP Thực phẩm Hữu Nghị,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 1,500 VND",15%,1500.0,2026-06-04,2026-06-05,2026-06-16,1500,2026-03-23,Bằng (1500)
-HU1,HOSE,CTCP Đầu tư và Xây dựng HUD1,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 150.0%,150%,,2026-06-05,2026-06-05,,,,
-MGC,UPCOM,CTCP Địa chất mỏ - TKV,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 300 VND,3%,300.0,2026-06-04,2026-06-05,2026-06-26,150,2025-06-05,Tăng 100% (150→300)
-NQN,UPCOM,CTCP Nước sạch Quảng Ninh,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,NQN - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-26,,,
-RCC,UPCOM,CTCP Tổng Công ty Công trình Đường sắt Việt Nam,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,RCC - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-30,,,
-SAM,HOSE,CTCP SAM Holdings,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 6.0%,6%,,2026-06-04,2026-06-05,,,,
-SGS,UPCOM,CTCP Vận tải biển Sài Gòn,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,SGS - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,2026-06-30,,,
-TAW,UPCOM,CTCP Cấp nước Trung An,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,300 VND",13%,1300.0,2026-06-04,2026-06-05,2026-06-26,400,2025-06-02,Tăng 225% (400→1300)
-TAW,UPCOM,CTCP Cấp nước Trung An,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 3 2023 - 215 VND,2.15%,215.0,2026-06-04,2026-06-05,2026-06-26,400,2025-06-02,Giảm 46% (400→215)
-TDB,UPCOM,CTCP Thủy điện Định Bình,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 1 2026 - 1,500 VND",15%,1500.0,2026-06-04,2026-06-05,2026-06-19,1500,2025-12-26,Bằng (1500)
-TDB,UPCOM,CTCP Thủy điện Định Bình,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 3 2025 - 1,000 VND",10%,1000.0,2026-06-04,2026-06-05,2026-06-19,1500,2025-12-26,Giảm 33% (1500→1000)
-THG,HOSE,CTCP Đầu tư và Xây dựng Tiền Giang,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 3 2025 - 1,000 VND",10%,1000.0,2026-06-04,2026-06-05,2026-07-10,1000,2026-03-16,Bằng (1000)
-THG,HOSE,CTCP Đầu tư và Xây dựng Tiền Giang,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 13.0%,13%,,2026-06-04,2026-06-05,,,,
-THT,HNX,CTCP Than Hà Tu - Vinacomin,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 800 VND,8%,800.0,2026-06-04,2026-06-05,2026-06-30,300,2025-06-04,Tăng 167% (300→800)
-THU,UPCOM,CTCP Môi trường và Công trình Đô thị Thanh Hóa,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,THU - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-04,2026-06-05,,,,
-TMG,UPCOM,CTCP Kim loại màu Thái Nguyên - Vimico,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 3,500 VND",35%,3500.0,2026-06-04,2026-06-05,2026-06-16,1500,2026-02-26,Tăng 133% (1500→3500)
 AGP,UPCOM,CTCP Dược phẩm Agimexpharm,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 5.0%,5%,,2026-06-08,2026-06-08,,,,
 BNA,HNX,CTCP Tập đoàn Đầu tư Bảo Ngọc,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,BNA - Tổ chức ĐHĐCĐ thường niên 2026,,,2026-06-05,2026-06-08,2026-07-18,,,
 CKD,UPCOM,CTCP Cơ khí Đông Anh LICOGI,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,000 VND",10%,1000.0,2026-06-05,2026-06-08,2026-06-30,2100,2025-10-14,Giảm 52% (2100→1000)
@@ -165,7 +139,7 @@ CCP,UPCOM,CTCP Cảng Cửa Cấm Hải Phòng,Cổ tức / Phát hành,Trả c�
 DST,HNX,CTCP Đầu tư Sao Thăng Long,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,DST - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-22,2026-06-23,,,,
 DTD,HNX,CTCP Đầu tư Phát triển Thành Đạt,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 500 VND,5%,500.0,2026-06-22,2026-06-23,2026-07-15,,,
 DTD,HNX,CTCP Đầu tư Phát triển Thành Đạt,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 10.0%,10%,,2026-06-22,2026-06-23,,,,
-HTC,HNX,CTCP Thương mại Hóc Môn,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,HTC - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-22,2026-06-23,,,,
+HTC,HNX,CTCP Thương mại Hóc Môn,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,HTC - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-22,2026-06-23,2026-07-22,,,
 MCH,HOSE,CTCP Hàng tiêu dùng Masan,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 1.0%,1.00002%,,2026-06-23,2026-06-23,,,,
 MML,UPCOM,CTCP Masan MeatLife,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 1.4%,1.41%,,2026-06-23,2026-06-23,,,,
 MSN,HOSE,CTCP Tập đoàn Masan,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 1.0%,0.95%,,2026-06-23,2026-06-23,,,,
@@ -191,7 +165,7 @@ BNW,UPCOM,CTCP Nước sạch Bắc Ninh,Cổ tức / Phát hành,Trả cổ t�
 CCA,UPCOM,CTCP Xuất nhập khẩu Thuỷ sản Cần Thơ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 38.5%,38.5%,,2026-06-24,2026-06-25,,,,
 CH5,UPCOM,CTCP Xây dựng Số 5 Hà Nội,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,100 VND",11%,1100.0,2026-06-24,2026-06-25,2026-07-17,1000,2025-07-01,Tăng 10% (1000→1100)
 CSC,HNX,CTCP Tập đoàn Cotana,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 10.0%,10%,,2026-06-24,2026-06-25,,,,
-PC1,HOSE,CTCP Tập Đoàn PC1,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,PC1 - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-24,2026-06-25,,,,
+PC1,HOSE,CTCP Tập Đoàn PC1,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,PC1 - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-24,2026-06-25,2026-07-24,,,
 RCL,HNX,CTCP Địa ốc Chợ Lớn,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 2.0%,2%,,2026-06-24,2026-06-25,,,,
 SDK,UPCOM,CTCP Cơ khí Luyện kim,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,SDK - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-06-24,2026-06-25,,,,
 BAB,HNX,Ngân hàng TMCP Bắc Á,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 7.5%,7.5%,,2026-06-25,2026-06-26,,,,
@@ -298,6 +272,7 @@ FHS,UPCOM,CTCP Phát hành Sách Thành phố Hồ Chí Minh,Cổ tức / Phát 
 HVT,HNX,CTCP Hóa chất Việt Trì,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,000 VND",10%,1000.0,2026-07-10,2026-07-13,2026-07-31,1500,2025-06-05,Giảm 33% (1500→1000)
 NBT,UPCOM,CTCP Cấp thoát nước Bến Tre,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 600 VND,6%,600.0,2026-07-10,2026-07-13,2026-07-29,500,2026-01-21,Tăng 20% (500→600)
 DHA,HOSE,CTCP Hóa An,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 3,000 VND",30%,3000.0,2026-07-13,2026-07-14,2026-07-30,1500,2025-09-15,Tăng 100% (1500→3000)
+IMP,HOSE,CTCP Dược phẩm Imexpharm,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 600 VND,6%,600.0,2026-07-13,2026-07-14,2026-07-21,500,2025-06-09,Tăng 20% (500→600)
 KHW,UPCOM,CTCP Cấp thoát nước Khánh Hòa,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,750 VND",17.5%,1750.0,2026-07-13,2026-07-14,2026-08-28,1700,2025-08-04,Tăng 3% (1700→1750)
 KHW,UPCOM,CTCP Cấp thoát nước Khánh Hòa,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 25.0%,25%,,2026-07-13,2026-07-14,,,,
 PJT,HOSE,CTCP Vận tải Xăng dầu Đường Thủy Petrolimex,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 600 VND,6%,600.0,2026-07-13,2026-07-14,2026-07-27,600,2025-07-10,Bằng (600)
@@ -312,6 +287,7 @@ HTG,HOSE,Tổng Công ty cổ phần Dệt may Hòa Thọ,Cổ tức / Phát hà
 HTG,HOSE,Tổng Công ty cổ phần Dệt may Hòa Thọ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 20.0%,20%,,2026-07-16,2026-07-17,,,,
 TKU,HNX,CTCP Công nghiệp Tung Kuang,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 500 VND,5%,500.0,2026-07-16,2026-07-17,2026-07-31,500,2025-09-12,Bằng (500)
 VLB,UPCOM,CTCP Xây dựng và Sản xuất Vật liệu xây dựng Biên Hòa,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 1,900 VND",19%,1900.0,2026-07-16,2026-07-17,2026-08-12,3000,2025-12-29,Giảm 37% (3000→1900)
+QCC,UPCOM,CTCP Đầu tư Xây dựng và Phát triển Hạ tầng Viễn thông,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 600 VND,6%,600.0,2026-07-17,2026-07-20,2026-07-29,500,2025-05-12,Tăng 20% (500→600)
 TID,UPCOM,CTCP Tổng Công ty Tín Nghĩa,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,200 VND",12%,1200.0,2026-07-17,2026-07-20,2026-07-31,1100,2025-08-14,Tăng 9% (1100→1200)
 XLV,UPCOM,CTCP Xây Lắp và Dịch vụ Sông Đà,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,500 VND",15%,1500.0,2026-07-17,2026-07-20,2026-07-30,1500,2025-05-16,Bằng (1500)
 HDW,UPCOM,CTCP Kinh doanh Nước sạch Hải Dương,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 820 VND,8.2%,820.0,2026-07-21,2026-07-22,2026-08-12,810,2025-09-09,Tăng 1% (810→820)
@@ -867,6 +843,7 @@ DXP,HNX,CTCP Cảng Đoạn Xá,Cổ tức / Phát hành,Phát hành cổ phiế
 DXV,HOSE,CTCP VICEM Vật liệu Xây dựng Đà Nẵng,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,DXV-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-25,,,
 DZM,UPCOM,CTCP Cơ điện Dzĩ An,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
 DZM,UPCOM,CTCP Cơ điện Dzĩ An,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,DZM-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-05-27,,,
+E12,UPCOM,CTCP Xây dựng Điện VNECO12,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 300.0%,300%,,,,,,,
 E12,UPCOM,CTCP Xây dựng Điện VNECO12,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 166.7%,166.667%,,,,,,,
 E12,UPCOM,CTCP Xây dựng Điện VNECO12,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 100.0%,100%,,,,,,,
 EBS,HNX,CTCP Sách Giáo dục tại Thành phố Hà Nội,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV,0%,,,,,,,
@@ -891,6 +868,7 @@ EIN,UPCOM,CTCP Đầu tư - Thương mại - Dịch vụ Điện Lực,ĐHĐCĐ 
 ELC,HOSE,CTCP Công Nghệ - Viễn Thông Elcom,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 3.3%,3.27%,,,,,,,
 ELC,HOSE,CTCP Công Nghệ - Viễn Thông Elcom,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 2.0%,2%,,,,,,,
 ELC,HOSE,CTCP Công Nghệ - Viễn Thông Elcom,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 5.0%,5%,,,,,,,
+EMG,UPCOM,CTCP Thiết bị Phụ Tùng Cơ Điện,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 1,500 VND",15%,1500.0,,,,,,
 EMG,UPCOM,CTCP Thiết bị Phụ Tùng Cơ Điện,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,EMG-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-06-25,,,
 EVF,HOSE,Công ty Tài chính Tổng hợp Cổ phần Điện lực,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV,0%,,,,,,,
 EVG,HOSE,CTCP Tập đoàn EverLand,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
@@ -994,6 +972,7 @@ HAR,HOSE,CTCP Đầu tư Thương mại Bất động sản An Dương Thảo Đ
 HAS,HOSE,CTCP Hacisco,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 50.0%,50%,,,,,,,
 HAS,HOSE,CTCP Hacisco,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,HAS-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-26,,,
 HAT,HNX,CTCP Thương mại Bia Hà Nội,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,HAT- Nghị quyết Đại hội đồng cổ đông thường niên năm 2017,,,,,2017-04-25,,,
+HBC,UPCOM,CTCP Tập đoàn Xây dựng Hòa Bình,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 14.8%,14.81%,,,,,,,
 HBC,UPCOM,CTCP Tập đoàn Xây dựng Hòa Bình,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 99.9%,99.9385%,,,,,,,
 HBC,UPCOM,CTCP Tập đoàn Xây dựng Hòa Bình,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 57.6%,57.6%,,,,,,,
 HBC,UPCOM,CTCP Tập đoàn Xây dựng Hòa Bình,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
@@ -1013,6 +992,7 @@ HCD,HOSE,CTCP Đầu tư Sản xuất và Thương mại HCD,Cổ tức / Phát 
 HCD,HOSE,CTCP Đầu tư Sản xuất và Thương mại HCD,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 5.0%,5%,,,,,,,
 HCD,HOSE,CTCP Đầu tư Sản xuất và Thương mại HCD,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 12.0%,12%,,,,,,,
 HCI,UPCOM,CTCP Đầu tư Xây dựng Hà Nội ,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,HCI- Nghị quyết Đại hội đồng cổ đông thường niên năm 2017,,,,,2017-04-18,,,
+HCM,HOSE,CTCP Chứng khoán Thành phố Hồ Chí Minh,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 400 VND,4%,400.0,,,,,,
 HCM,HOSE,CTCP Chứng khoán Thành phố Hồ Chí Minh,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 25.0%,25%,,,,,,,
 HCM,HOSE,CTCP Chứng khoán Thành phố Hồ Chí Minh,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 20.0%,20%,,,,,,,
 HCM,HOSE,CTCP Chứng khoán Thành phố Hồ Chí Minh,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 2.0%,2%,,,,,,,
@@ -1173,7 +1153,6 @@ ILA,UPCOM,CTCP ILA,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành
 ILA,UPCOM,CTCP ILA,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
 ILS,UPCOM,CTCP Đầu tư Thương mại và Dịch vụ Quốc tế,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 112.0%,112%,,,,,,,
 IME,UPCOM,CTCP Cơ khí và Xây lắp Công nghiệp,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,IME-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-05-13,,,
-IMP,HOSE,CTCP Dược phẩm Imexpharm,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 600 VND,6%,600.0,,,,,,
 IMP,HOSE,CTCP Dược phẩm Imexpharm,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV tỉ lệ 1.0%,1.01%,,,,,,,
 IMP,HOSE,CTCP Dược phẩm Imexpharm,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV,0%,,,,,,,
 IN4,UPCOM,CTCP In Số 4,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2021 - 1,500 VND",15%,1500.0,,,,,,
@@ -1285,6 +1264,7 @@ LDG,HOSE,CTCP Đầu tư LDG,Cổ tức / Phát hành,Phát hành cổ phiếu,P
 LDP,HNX,CTCP Dược Lâm Đồng (Ladophar),Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 50.0%,50%,,,,,,,
 LDP,HNX,CTCP Dược Lâm Đồng (Ladophar),Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 64.9%,64.94%,,,,,,,
 LDP,HNX,CTCP Dược Lâm Đồng (Ladophar),Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
+LDW,UPCOM,CTCP Cấp thoát nước Lâm Đồng,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 612 VND,6.12%,612.0,,,,,,
 LEC,UPCOM,CTCP Bất động sản Điện lực Miền Trung,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 210.0%,210%,,,,,,,
 LGC,HOSE,CTCP Đầu tư Cầu đường CII,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,LGC- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-17,,,
 LGL,HOSE,CTCP Đầu tư và Phát triển Đô thị Long Giang,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 100.0%,100%,,,,,,,
@@ -1301,6 +1281,7 @@ LIG,HNX,CTCP Licogi 13,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội c�
 LIX,HOSE,CTCP Bột Giặt Lix,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,LIX- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-28,,,
 LKW,UPCOM,CTCP Cấp nước Long Khánh,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 3,000 VND",30%,3000.0,,,,,,
 LKW,UPCOM,CTCP Cấp nước Long Khánh,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,LKW- Nghị quyết Đại hội đồng cổ đông thường niên năm 2017,,,,,2017-04-21,,,
+LLM,UPCOM,Tổng Công ty Lắp máy Việt Nam - CTCP,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 31.7%,31.7009%,,,,,,,
 LM3,UPCOM,CTCP Lilama 3,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 262.9%,262.85%,,,,,,,
 LM3,UPCOM,CTCP Lilama 3,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 268.9%,268.93%,,,,,,,
 LM3,UPCOM,CTCP Lilama 3,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
@@ -1466,6 +1447,7 @@ NNT,UPCOM,CTCP Cấp nước Ninh Thuận,ĐHĐCĐ / Lấy ý kiến,Nghị quy�
 NO1,HOSE,CTCP Tập đoàn 911,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 100.0%,100%,,,,,,,
 NOS,UPCOM,CTCP Vận tải biển và Thương mại Phương Đông,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,NOS-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-05-25,,,
 NQB,UPCOM,CTCP Cấp nước Quảng Bình,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,NQB- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-20,,,
+NRC,HNX,CTCP Tập đoàn NRC,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 108.0%,108%,,,,,,,
 NRC,HNX,CTCP Tập đoàn NRC,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 100.0%,100%,,,,,,,
 NRC,HNX,CTCP Tập đoàn NRC,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 108.0%,107.99%,,,,,,,
 NRC,HNX,CTCP Tập đoàn NRC,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 50.0%,50%,,,,,,,
@@ -1484,7 +1466,8 @@ NTW,UPCOM,CTCP Cấp nước Nhơn Trạch,ĐHĐCĐ / Lấy ý kiến,Nghị quy
 NUE,UPCOM,CTCP Môi trường Đô thị Nha Trang,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,NUE- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-27,,,
 NVB,HNX,Ngân hàng TMCP Quốc Dân,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 71.3%,71.3%,,,,,,,
 NVB,HNX,Ngân hàng TMCP Quốc Dân,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành cho CBCNV,0%,,,,,,,
-NVL,HOSE,CTCP Tập đoàn Đầu tư Địa ốc No Va ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 35.8%,35.8%,,,,,,,
+NVL,HOSE,CTCP Tập đoàn Đầu tư Địa ốc No Va ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 33.3%,33.3333%,,,,,,,
+NVL,HOSE,CTCP Tập đoàn Đầu tư Địa ốc No Va ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 33.3%,33.3%,,,,,,,
 NVP,UPCOM,CTCP Nước sạch Vĩnh Phúc,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,NVP-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-05-18,,,
 NVT,HOSE,CTCP Bất động sản Du lịch Ninh Vân Bay,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
 NVT,HOSE,CTCP Bất động sản Du lịch Ninh Vân Bay,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,NVT- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-26,,,
@@ -1586,6 +1569,7 @@ PLP,HOSE,CTCP Sản xuất và Công nghệ Nhựa Pha Lê,Cổ tức / Phát h�
 PLP,HOSE,CTCP Sản xuất và Công nghệ Nhựa Pha Lê,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 5.0%,5%,,,,,,,
 PLX,HOSE,Tập đoàn Xăng Dầu Việt Nam,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PLX-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-25,,,
 PMB,HNX,CTCP Phân bón và Hóa chất Dầu khí Miền Bắc,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PMB- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-04,,,
+PMJ,UPCOM,CTCP Vật tư Bưu Điện,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 70.0%,70%,,,,,,,
 PMJ,UPCOM,CTCP Vật tư Bưu Điện,ĐHĐCĐ / Lấy ý kiến,Đại hội Đồng Cổ đông,PMJ - Tổ chức ĐHĐCĐ thường niên 2019,,,,,,,,
 PMJ,UPCOM,CTCP Vật tư Bưu Điện,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PMJ-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-05-12,,,
 PMP,HNX,CTCP Bao bì đạm Phú Mỹ,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 67.9%,67.857%,,,,,,,
@@ -1598,6 +1582,7 @@ PNJ,HOSE,CTCP Vàng bạc Đá quý Phú Nhuận,Cổ tức / Phát hành,Phát 
 PNT,UPCOM,CTCP Kỹ thuật Xây dựng Phú Nhuận,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PNT-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-06-16,,,
 POM,UPCOM,CTCP Thép Pomina,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
 POM,UPCOM,CTCP Thép Pomina,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ,0%,,,,,,,
+POS,UPCOM,CTCP Vận hành và Xây lắp PTSC,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 15.0%,15%,,,,,,,
 POS,UPCOM,CTCP Vận hành và Xây lắp PTSC,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,POS- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-19,,,
 POT,HNX,CTCP Thiết bị Bưu điện,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 10.0%,10%,,,,,,,
 POT,HNX,CTCP Thiết bị Bưu điện,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,POT- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-03-09,,,
@@ -1609,8 +1594,8 @@ PPI,UPCOM,CTCP Đầu tư và Phát triển Dự án Hạ tầng Thái Bình Dư
 PPP,HNX,CTCP Dược phẩm Phong Phú,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 2 2021 - 200 VND,2%,200.0,,,,,,
 PPP,HNX,CTCP Dược phẩm Phong Phú,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PPP- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-22,,,
 PPS,HNX,CTCP Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PPS- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-26,,,
-PPY,HNX,CTCP Xăng dầu Dầu khí Phú Yên,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 100.0%,100%,,,,,,,
 PPY,HNX,CTCP Xăng dầu Dầu khí Phú Yên,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 50.1%,50.1179%,,,,,,,
+PPY,HNX,CTCP Xăng dầu Dầu khí Phú Yên,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 100.0%,100%,,,,,,,
 PPY,HNX,CTCP Xăng dầu Dầu khí Phú Yên,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PPY- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-14,,,
 PRC,HNX,CTCP Logistics Portserco,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Quyền mua CP cho Cổ đông hiện hữu tỉ lệ 100.0%,100%,,,,,,,
 PRE,HNX,Tổng Công ty cổ phần Tái bảo hiểm Hà Nội,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành rộng rãi qua đấu giá,0%,,,,,,,
@@ -1667,7 +1652,6 @@ PXM,UPCOM,CTCP Xây lắp Dầu khí Miền Trung,ĐHĐCĐ / Lấy ý kiến,Ngh
 PXS,UPCOM,CTCP Kết cấu Kim loại và Lắp máy Dầu khí,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PXS- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-28,,,
 PXT,UPCOM,CTCP Xây lắp Đường ống Bể chứa Dầu khí,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,PXT- Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-04-27,,,
 QBS,UPCOM,CTCP Xuất nhập khẩu Quảng Bình,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,QBS-Nghị quyết đại hội cổ đông thường niên năm 2017,,,,,2017-03-24,,,
-QCC,UPCOM,CTCP Đầu tư Xây dựng và Phát triển Hạ tầng Viễn thông,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 600 VND,6%,600.0,,,,,,
 QCC,UPCOM,CTCP Đầu tư Xây dựng và Phát triển Hạ tầng Viễn thông,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Phát hành riêng lẻ tỉ lệ 2566.7%,2566.66%,,,,,,,
 QCC,UPCOM,CTCP Đầu tư Xây dựng và Phát triển Hạ tầng Viễn thông,ĐHĐCĐ / Lấy ý kiến,Nghị quyết đại hội cổ đông thường niên,QCC-Nghị quyết Đại hội đồng cổ đông thường niên năm 2017,,,,,2017-04-14,,,
 QCG,HOSE,CTCP Quốc Cường Gia Lai,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 10.0%,10%,,,,,,,
