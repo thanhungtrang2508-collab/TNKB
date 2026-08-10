@@ -1,7 +1,4 @@
 ﻿Mã CP,Sàn,Tên DN,Nhóm,Loại sự kiện,Chi tiết,Tỷ lệ,Tiền mặt (đ/cp),Ngày GDKHQ,Ngày ĐKCC (chốt quyền),Ngày thực hiện,Cổ tức TM kỳ trước (đ/cp),Ngày kỳ trước,So với kỳ trước
-IBD,UPCOM,CTCP In Tổng hợp Bình Dương,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 500 VND,5%,500.0,2026-07-08,2026-07-09,2026-07-30,600,2025-05-23,Giảm 17% (600→500)
-TVT,HOSE,Tổng Công ty Việt Thắng - CTCP,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 1,000 VND",10%,1000.0,2026-07-08,2026-07-09,2026-07-27,500,2025-12-12,Tăng 100% (500→1000)
-VDN,UPCOM,CTCP Vinatex Đà Nẵng,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 4,000 VND",40%,4000.0,2026-07-08,2026-07-09,2026-07-30,2000,2025-07-23,Tăng 100% (2000→4000)
 ABB,UPCOM,Ngân hàng TMCP An Bình,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Trả Cổ tức bằng Cổ phiếu tỉ lệ 15.0%,15%,,2026-07-09,2026-07-10,,,,
 ADP,HOSE,CTCP Sơn Á Đông,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 1 2026 - 700 VND,7%,700.0,2026-07-09,2026-07-10,2026-08-06,1000,2026-05-15,Giảm 30% (1000→700)
 BTT,HOSE,CTCP Thương mại Dịch vụ Bến Thành,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 2 2025 - 2,000 VND",20%,2000.0,2026-07-09,2026-07-10,2026-09-18,1500,2025-08-21,Tăng 33% (1500→2000)
@@ -225,6 +222,7 @@ TVA,UPCOM,CTCP Sứ Viglacera Thanh Trì,Cổ tức / Phát hành,Trả cổ t�
 FOC,UPCOM,CTCP Dịch vụ Trực tuyến FPT,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 10,000 VND",100%,10000.0,2026-08-10,2026-08-11,2026-09-11,10000,2025-05-23,Bằng (10000)
 MCH,HOSE,CTCP Hàng tiêu dùng Masan,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Đợt 1 2026 - 2,000 VND",20%,2000.0,2026-08-10,2026-08-11,2026-08-19,2500,2026-01-09,Giảm 20% (2500→2000)
 PGV,HOSE,Tổng Công ty Phát điện 3 - CTCP,Cổ tức / Phát hành,Phát hành cổ phiếu,Phát hành cổ phiếu - Cổ phiếu thưởng tỉ lệ 8.0%,8%,,2026-08-10,2026-08-11,,,,
+POB,UPCOM,CTCP Xăng dầu Dầu khí Hưng Yên,ĐHĐCĐ / Lấy ý kiến,Đại hội Cổ đông Bất thường,POB - Tổ chức ĐHĐCĐ bất thường 2026,,,2026-08-10,2026-08-11,2026-09-14,,,
 SB1,UPCOM,CTCP Bia Sài Gòn - Nghệ Tĩnh,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Cả năm 2025 - 800 VND,8%,800.0,2026-08-10,2026-08-11,2026-09-10,700,2025-08-18,Tăng 14% (700→800)
 AAM,HOSE,CTCP Thủy sản MeKong,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,Trả cổ tức bằng tiền mặt - Đợt 1 2026 - 300 VND,3%,300.0,2026-08-11,2026-08-12,2026-08-24,700,2023-03-31,Giảm 57% (700→300)
 BFC,HOSE,CTCP Phân bón Bình Điền,Cổ tức / Phát hành,Trả cổ tức bằng tiền mặt,"Trả cổ tức bằng tiền mặt - Cả năm 2025 - 3,500 VND",35%,3500.0,2026-08-11,2026-08-12,2026-08-28,2500,2025-06-11,Tăng 40% (2500→3500)
